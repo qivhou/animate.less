@@ -1,0 +1,29 @@
+.keyframes (tada; 
+    {
+        .keyframe(0%, 100%; {
+            .scale3d(1, 1, 1);
+        })
+    },
+    {
+        .keyframe(10%, 20%; {
+            .scale3d(0.9, 0.9, 0.9);
+            .rotate3d(0, 0, 1, -3deg);
+        })
+    },
+    {
+        .keyframe(30%, 50%, 70%, 90%; {
+            .scale3d(1.1, 1.1, 1.1);
+            .rotate3d(0, 0, 1, 3deg);
+        })
+    },
+    {
+        .keyframe(40%, 60%, 80%; {
+            .scale3d(1.1, 1.1, 1.1);
+            .rotate3d(0, 0, 1, -3deg);
+        })
+    }
+);
+
+.tada {
+    animation-name: tada;
+}

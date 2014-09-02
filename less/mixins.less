@@ -1,0 +1,37 @@
+.loop (@list, @index) when (@index <= length(@list)){
+    @item : extract(@list, @index) ;
+    @item();
+    .loop(@list, @index + 1);
+}
+
+.keyframe (@point; @props){
+    @{point} {
+        .loop(@props, 1);
+    }
+}
+
+.keyframes (@name; @rules){
+    @keyframes @name {
+        .loop(@rules, 1);
+    }
+}
+
+.scale3d (@x; @y; @z){
+    transform: scale3d(@x, @y, @z);
+}
+
+.cubic-bezier(@x1; @y1; @x2; @y2){
+    transition-timing-function: cubic-bezier(@x1, @y1, @x2, @y2);
+}
+
+.translate3d(@x; @y; @z){
+    transform: translate3d(@x, @y, @z);
+}
+
+.rotate3d(@x; @y; @z; @deg){
+    transform: rotate3d(@x, @y, @z, @deg);
+}
+
+.none(){
+    transform: none;
+}

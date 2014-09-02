@@ -1,0 +1,21 @@
+.keyframes (pulse ;
+    {
+        .keyframe(0%; {
+            .scale3d(1,1,1);
+        })
+    }, 
+    {
+        .keyframe(50%; {
+            .scale3d(1.05, 1.05, 1.05);
+        })
+    },
+    {
+        .keyframe(100%; {
+            .scale3d(1, 1, 1);
+        })
+    }
+);
+
+.pulse {
+    animation-name: pulse;
+}
