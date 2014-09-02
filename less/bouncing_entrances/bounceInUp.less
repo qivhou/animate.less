@@ -1,0 +1,38 @@
+.keyframes (bounceInUp;
+    {
+        .keyframe(0%, 20%, 40%, 60%, 80%, 100%;{
+            .bounce-cubic-bezier();
+        })
+    },
+    {
+        .keyframe(0%; {
+            opacity: 0;
+            .translate3d(0, 3000px, 0);
+        })
+    },
+    {
+        .keyframe(60%; {
+            opacity: 1;
+            .translate3d(0, -20px, 0);
+        })
+    },
+    {
+        .keyframe(75%; {
+            .translate3d(0, 10px, 0);
+        })
+    },
+    {
+        .keyframe(90%; {
+            .translate3d(0, -5px, 0);
+        })
+    },
+    {
+        .keyframe(100%; {
+            .translate3d(0, 0, 0);
+        })
+    }
+);
+
+.bounceInUp{
+    animation-name:bounceInUp;
+}

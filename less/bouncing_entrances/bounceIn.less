@@ -1,0 +1,45 @@
+.keyframes (bounceIn;
+    {
+        .keyframe(0%, 20%, 40%, 60%, 80%, 100%;{
+            .bounce-cubic-bezier();
+        })
+    },
+    {
+        .keyframe(0%; {
+            opacity: 0;
+            .scale3d(0.3, 0.3, 0.3);
+        })
+    },
+    {
+        .keyframe(20%; {
+            .scale3d(1.1, 1.1, 1.1);
+        })
+    },
+    {
+        .keyframe(40%; {
+            .scale3d(0.9, 0.9, 0.9);
+        })
+    },
+    {
+        .keyframe(60%; {
+            opacity: 1;
+            .scale3d(1.03, 1.03, 1.03);
+        })
+    },
+    {
+        .keyframe(80%; {
+            .scale3d(0.97, 0.97, 0.97);
+        })
+    },
+    {
+        .keyframe(100%; {
+            opacity: 1;
+            .scale3d(1, 1, 1);
+        })
+    }
+);
+
+.bounceIn{
+    animation-name: bounceIn;
+    animation-duration: 0.75s;
+}
