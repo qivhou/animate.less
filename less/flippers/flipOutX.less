@@ -1,0 +1,19 @@
+@keyframes flipOutX {
+    0%, 30%, 100% {
+        transform: perspective(400px);
+    }
+    30% {
+        .rotate3d(1, 0, 0, -20deg);
+        opacity: 1;
+    }
+    100% {
+        .rotate3d(1, 0, 0, 90deg);
+        opacity: 0
+    }
+}
+
+.flipOutX {
+    animation-name: flipOutX;
+    animation-duration: 0.75s;
+    backface-visibility: visible !important;
+}

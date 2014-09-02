@@ -1,0 +1,27 @@
+@keyframes flipInX {
+    0%, 40%, 60%, 80%, 100% {
+        transform: perspective(400px);
+    }
+    0%, 40% {
+        transition-timing-function: ease-in;
+    }
+    0% {
+        .rotate3d(1, 0, 0, 90deg);
+        opacity: 0;
+    }
+    40% {
+        .rotate3d(1, 0, 0, -20deg);
+    }
+    60% {
+        .rotate3d(1, 0, 0, 10deg);
+        opacity: 1;
+    }
+    80% {
+        .rotate3d(1, 0, 0, -5deg);
+    }
+}
+
+.flipInX {
+    backface-visibility: visible !important;
+    animation-name: flipInX;
+}

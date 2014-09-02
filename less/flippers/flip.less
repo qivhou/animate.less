@@ -1,0 +1,27 @@
+@keyframes flip {
+    0%, 40%, 50%, 80%, 100% {
+        transform: perspective(400px);
+        animation-timing-function: ease-in;
+    }
+    0%, 40% {
+        animation-timing-function: ease-out;
+    }
+    0% {
+        .rotate3d(0, 1, 0, -360deg);
+    }
+    40%, 50% {
+        .translate3d(0, 0, 150px);
+        .rotate3d(0, 1, 0, -190deg);
+    }
+    50% {
+        .rotate3d(0, 1, 0, -170deg);
+    }
+    80% {
+        .scale3d(0.95, 0.95, 0.95);
+    }
+}
+
+.animated.flip {
+    backface-visibility: visible;
+    animation-name: flip;
+}
