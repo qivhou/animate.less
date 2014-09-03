@@ -1,0 +1,17 @@
+@keyframes rotateIn {
+    0% , 100% {
+        transform-origin: cneter;
+    }
+    0% {
+        transform: rotate3d(0, 0, 1, 200deg);
+        opacity: 0;
+    }
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+.rotateIn {
+    animation-name: rotateIn;
+}
