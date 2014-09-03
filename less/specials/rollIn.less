@@ -1,0 +1,15 @@
+@keyframes rollIn {
+    0% {
+        transform-origin: center;
+        transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.rollIn {
+    animation-name: rollIn;
+}
