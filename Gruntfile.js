@@ -22,8 +22,11 @@ module.exports = function(grunt) {
     },
     watch: {
         less: {
+            options: {
+                livereload: true
+            },
             files: ['less/**/*'],
-            tasks: ['less']
+            tasks: ['less', 'autoprefixer', 'copy']
         }
     },
     less: {
@@ -35,17 +38,35 @@ module.exports = function(grunt) {
     },
     clean: {
         build : ['css']
+    },
+    copy : {
+        demo : {
+            src: "css/animate.css",
+            dest: "demo/animate.css"
+        }
+    },
+    connect : {
+        server: {
+            options: {
+                port: 9001,
+                base:'demo',
+                keepalive: true
+            }
+        }
     }
   });
 
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-contrib-connect');
 
   // Default task.
   grunt.registerTask('default', 'watch');
   grunt.registerTask('build', ['clean', 'less', 'autoprefixer', 'cssmin']);
+  grunt.registerTask('server', ['connect']);
 };
