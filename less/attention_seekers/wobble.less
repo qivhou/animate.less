@@ -1,40 +1,23 @@
-.keyframes( wobble; 
-    {
-        .keyframe(0%, 100%; {
-            .none();
-        })
-    },
-    {
-        .keyframe(15%; {
-            .translate3d(-25%, 0, 0,);
-            .rotate3d(0, 0, 1, -5deg);
-        })
-    },
-    {
-        .keyframe(30%; {
-            .translate3d(20%, 0, 0);
-            .rotate3d(0, 0, 1, 3deg);
-        })
-    },
-    {
-        .keyframe(45%; {
-            .translate3d(-15%, 0, 0);
-            .rotate3d(0, 0, 1, -3deg);
-        })
-    },
-    {
-        .keyframe(60%; {
-            .translate3d(10%, 0, 0);
-            .rotate3d(0, 0, 1, 2deg);
-        })
-    },
-    {
-        .keyframe(75%; {
-            .translate3d(-5%, 0, 0);
-            .rotate3d(0, 0, 1, -1deg);
-        })
+@keyframes wobble {
+    15% {
+        transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
     }
-);
+    30% {
+        transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    }
+    45% {
+        transform: translate3d(-20%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    }
+    60% {
+        transform: translate3d(15%, 0, 0) rotate3d(0, 0, 1, 1deg);
+    }
+    75% {
+        transform: translate3d(-10%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    }
+    90% {
+        transform: translate3d(5%, 0, 0) rotate3d(0, 0, 1, 0deg);
+    }
+}
 
 .wobble {
     animation-name: wobble;

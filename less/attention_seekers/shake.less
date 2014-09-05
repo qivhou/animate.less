@@ -1,20 +1,11 @@
-.keyframes (shake;
-    {
-        .keyframe(0%, 100%; {
-            .translate3d(0, 0, 0);
-        })
-    },
-    {
-        .keyframe(10%, 30%, 50%, 70%, 90%; {
-            .translate3d(-10px, 0, 0);
-        })
-    },
-    {
-        .keyframe(20%, 40%, 60%, 80%; {
-            .translate3d(10px, 0, 0);
-        })
+@keyframes shake {
+    10%, 30%, 50%, 70%, 90% {
+        transform: translate3d(-10px, 0, 0);
     }
-);
+    20%, 40%, 60%, 80% {
+        transform: translate3d(10px, 0, 0);
+    }
+}
 
 .shake {
     animation-name: shake;
