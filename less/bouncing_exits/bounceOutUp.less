@@ -1,20 +1,14 @@
-.keyframes (bounceOutUp; 
-    {
-        .keyframe(20%; {
-            .translate3d(0, -10px, 0);
-        })
-    },
-    {
-        .keyframe(40%, 45%; {
-            .translate3d(0, 20px, 0);
-        })
-    },
-    {
-        .keyframe(100%;{
-            .translate3d(0, -2000px, 0);
-        })
+@keyframes bounceOutUp {
+    20% {
+        transform: translate3d(0, -10px, 0);
     }
-);
+    40%, 45% {
+        transform: translate3d(0, 20px, 0);
+    }
+    100% {
+        transform: translate3d(0, -2000px, 0);
+    }
+}
 
 .bounceOutUp {
     animation-name: bounceOutUp;
