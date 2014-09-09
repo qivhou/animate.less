@@ -1,13 +1,1 @@
-@keyframes fadeOutLeft {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        .translate3d(-100%, 0, 0);
-    }
-}
-
-.fadeOutLeft {
-    animation-name: fadeOutLeft;
-}
+.fadeOut(fadeOutLeft, -@fade-range, 0);

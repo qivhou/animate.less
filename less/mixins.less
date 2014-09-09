@@ -39,3 +39,104 @@
 .bounce-cubic-bezier(){
     .cubic-bezier(0.215, 0.610, 0.355, 1.000);
 }
+
+.animation-bind(@class-name, @animation-name){
+    .@{class-name} {
+        animation-name: @animation-name;
+    }
+}
+
+.fadeIn (@name) {
+    @keyframes @name {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    .animation-bind(@name, @name);
+}
+
+.fadeIn(@name, @x, @y){
+    @keyframes @name {
+        0% {
+            opacity: 0;
+            transform: translate3d(@x, @y, 0);
+        }
+        100% {
+            opacity: 1;
+            transform: none();
+        }
+    }
+    .animation-bind(@name, @name);
+}
+
+.fadeOut(@name) {
+    @keyframes @name {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    .animation-bind(@name, @name);
+}
+
+.fadeOut(@name, @x, @y){
+    @keyframes @name {
+        0% {
+            opacity: 1;
+            transform: translate3d(@x, @y, 0);
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .animation-bind(@name, @name);
+}
+
+.bounceIn(@name, @step1-x, @step1-y, @step2-x, @step2-y, @step3-x, @step3-y, @step4-x, @step4-y){
+    @keyframes @name {
+        0%, 60%, 75%, 90% {
+            .cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        }
+        0% {
+            opacity: 0;
+            transform: translate3d(@step1-x, @step1-y, 0);
+        }
+        60% {
+            opacity: 1;
+            transform: translate3d(@step2-x, @step2-y, 0);
+        }
+        75% {
+            transform: translate3d(@step3-x, @step3-y, 0);
+        }
+        90% {
+            transform: translate3d(@step4-x, @step4-y, 0);
+        }
+    }
+
+    .animation-bind(@name, @name);
+}
+
+.bounceOut(@name, @step1-x, @step1-y, @step2-x, @step2-y, @step3-x, @step3-y){
+    @keyframes @name {
+        20% {
+            transform: translate3d(@step1-x, @step1-y, 0);
+        }
+        40%, 45% {
+            opacity: 1;
+            transform: translate3d(@step2-x, @step2-y, 0);
+        }
+        100% {
+            opacity: 0;
+            transform: translate3d(@step3-x, @step3-y, 0);
+        }
+    }
+
+    .animation-bind(@name, @name);
+}
+
